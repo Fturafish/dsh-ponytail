@@ -4,6 +4,10 @@
   "type": "module",
   "description": "Ponytail for DeepSeek Harness: lazy senior dev mode — the smallest change that fully solves the task, plus /ponytail-review, /ponytail-audit, /ponytail-debt and /ponytail-gain, with a level band above the composer.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fturafish/dsh-plugin-ponytail.git"
+  },
   "keywords": [
     "deepseek-harness",
     "dsh",

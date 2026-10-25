@@ -72,7 +72,7 @@ Verified on a stock DSH desktop profile (Cordis 4 lineage, 2026-10 build).
 ### From a cloned directory *(this is the path I verified)*
 
 ```bash
-git clone https://github.com/<owner>/dsh-plugin-ponytail.git
+git clone https://github.com/Fturafish/dsh-plugin-ponytail.git
 ```
 
 Then ask your DSH agent to install that directory, or use the `plugin_manager` tool directly:
@@ -86,7 +86,7 @@ The tool links the directory into your profile, resolves the bundle patch, and r
 ### From a git spec *(convenient, but I have not tested it)*
 
 ```jsonc
-{ "action": "install_bundle", "target": "github:<owner>/dsh-plugin-ponytail" }
+{ "action": "install_bundle", "target": "github:Fturafish/dsh-plugin-ponytail" }
 ```
 
 A directory install is verified end to end; a git spec install is not, because I had no registry or GitHub access while building this. If it fails, use the cloned-directory path above.
@@ -200,20 +200,3 @@ The review, audit and debt workflows do read your repository — that is their j
 ## License
 
 [MIT](LICENSE). The prompt text is derived from Ponytail and retains its copyright notice, as that license requires.
-
----
-
-## Publishing checklist
-
-This repo is ready to push. Before you do, replace the placeholders:
-
-1. `<owner>` in the two install snippets above, and add a `repository` field to [`package.json`](package.json).
-2. `Copyright (c) 2026 dsh-plugin-ponytail contributors` in [`LICENSE`](LICENSE) with your name.
-
-Then:
-
-```bash
-git init && git add . && git commit -m "dsh-plugin-ponytail 1.0.0"
-git remote add origin https://github.com/<owner>/dsh-plugin-ponytail.git
-git push -u origin main
-```
