@@ -1,0 +1,48 @@
+{
+  "name": "dsh-plugin-ponytail",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ponytail for DeepSeek Harness: lazy senior dev mode — the smallest change that fully solves the task, plus /ponytail-review, /ponytail-audit, /ponytail-debt and /ponytail-gain, with a level band above the composer.",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "ponytail",
+    "lazy",
+    "yagni",
+    "code-review",
+    "agent-skill"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "prompts/review.md",
+    "prompts/audit.md",
+    "prompts/debt.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

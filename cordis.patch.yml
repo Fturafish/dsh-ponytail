@@ -1,0 +1,15 @@
+# Inserts the Ponytail Host row into this profile's layer stack.
+#
+# `config` is your layer: it survives every upgrade of this package, so change
+# the default level, the band, or the shortcut marker word here.
+#
+#   level        off | lite | full | ultra   — the mode a session starts in
+#   band         true | false                — the band above the composer
+#   shortcutWord how a deliberate shortcut is marked in code comments
+- insert:
+    - id: ponytail
+      name: dsh-plugin-ponytail
+      config:
+        level: full
+        band: true
+        shortcutWord: shortcut
